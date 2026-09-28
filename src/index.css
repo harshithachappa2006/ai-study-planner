@@ -16,10 +16,23 @@
     background: white !important;
     color: black !important;
   }
-  .no-print {
+  .no-print,
+  .chat-widget,
+  [class*="chat-widget"],
+  [class*="chat-toggle"],
+  .n8n-chat {
     display: none !important;
   }
   .print-page-break {
     page-break-before: always;
   }
+}
+
+/* n8n Chat widget styling overrides */
+:root {
+  --chat--color-primary: #4f46e5;
+  --chat--color-primary-shade-50: #4338ca;
+  --chat--color-primary-shade-100: #3730a3;
+  --chat--color-secondary: #6366f1;
+  --chat--border-radius: 1rem;
 }

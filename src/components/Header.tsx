@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Sparkles, RotateCcw } from 'lucide-react';
+import { BookOpen, Sparkles, RotateCcw, MessageSquare } from 'lucide-react';
 
 interface HeaderProps {
   currentPage: 'home' | 'plan';
@@ -42,7 +42,17 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onReset, subject })
             </button>
           )}
 
-          <div className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+          <button
+            onClick={() => window.openN8nChat?.()}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors border border-indigo-200 cursor-pointer shadow-xs"
+            title="Chat with Nathan (n8n AI Assistant)"
+          >
+            <MessageSquare className="w-3.5 h-3.5 text-indigo-600" />
+            <span className="hidden sm:inline">Ask n8n Assistant</span>
+            <span className="sm:hidden">Chat</span>
+          </button>
+
+          <div className="hidden sm:flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span>Agent Ready</span>
           </div>

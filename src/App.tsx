@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { HomePage } from './components/HomePage';
 import { StudyPlanPage } from './components/StudyPlanPage';
 import { LoadingOverlay } from './components/LoadingOverlay';
+import { N8nChatWidget } from './components/N8nChatWidget';
 import { StudyPlanResponse, CreatePlanRequest, AdjustPlanRequest } from './types/studyPlan';
 import { AlertCircle, RefreshCw } from 'lucide-react';
 
@@ -128,6 +129,9 @@ export default function App() {
       {/* Interactive Loading Overlays */}
       {isLoading && <LoadingOverlay isAdjusting={false} />}
       {isAdjusting && <LoadingOverlay isAdjusting={true} />}
+
+      {/* n8n Live Chatbot Integration */}
+      <N8nChatWidget />
 
       {/* Clean Footer */}
       <footer className="border-t border-slate-200/80 bg-white py-6 text-center text-xs text-slate-500 no-print">
