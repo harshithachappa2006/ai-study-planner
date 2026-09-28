@@ -1,0 +1,6 @@
+{
+  "name": "AI Study Planner",
+  "description": "Smart exam preparation planner that transforms your syllabus into time-optimized schedules, practice questions, and revision checklists using Google Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
